@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "../api/axios";
+import axios from "../api/axios.js";
 import { IMAGE_BASE_URL } from "../api/config";
 import "./Row.css";
 import MovieModal from "./MovieModal/index";

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SearchPage.css";
-import axios from "../../api/axios";
+import axios from "../../api/axios.js";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDebounce } from "../../hooks/useDebounce";
 
