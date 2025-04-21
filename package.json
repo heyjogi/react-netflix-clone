@@ -1,7 +1,7 @@
 {
   "name": "netflix-clone",
   "private": true,
-  "homepage": "https://heyjogi.github.io/react-netflix-clone",
+  "homepage": "https://heyjogi.github.io/react-netflix-clone/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
