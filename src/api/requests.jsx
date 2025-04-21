@@ -12,7 +12,7 @@ const requests = {
   fetchDocumentaries: `/discover/movie?with_genres=99`,
 };
 
-export const IMAGE_ORIGINAL = `${IMAGE_BASE_URL}original`;
-export const IMAGE_W500 = `${IMAGE_BASE_URL}w500`;
+export const IMAGE_ORIGINAL = `${IMAGE_BASE_URL}/original`;
+export const IMAGE_W500 = `${IMAGE_BASE_URL}/w500`;
 
 export default requests;

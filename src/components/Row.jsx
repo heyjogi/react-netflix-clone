@@ -17,8 +17,11 @@ export default function Row({ title, id, fetchUrl, isLargeRow }) {
   const [movieSelected, setMovieSelection] = useState({});
 
   useEffect(() => {
+    console.log("fetchUrl in Row:", fetchUrl);
     fetchMovieData();
   }, [fetchUrl]);
+
+  console.log("fetchUrl in Row:", fetchUrl);
 
   const fetchMovieData = async () => {
     const request = await axios.get(fetchUrl);
@@ -60,13 +63,15 @@ export default function Row({ title, id, fetchUrl, isLargeRow }) {
       >
         <div id={id} className="row__posters">
           {movies.map((movie) => (
-            <SwiperSlide>
+            <SwiperSlide key={movie.id}>
               <img
-                key={movie.id}
                 className={`row__poster ${isLargeRow && "row__posterLarge"}`}
                 src={`${IMAGE_BASE_URL}${
-                  isLargeRow ? movie.poster_path : movie.backdrop_path
+                  isLargeRow ? movie.poster_path : movie.backdrop_path || ""
                 }`}
+                onError={(e) => {
+                  e.target.style.display = "none";
+                }}
                 loading="lazy"
                 alt={movie.name}
                 onClick={() => handleClick(movie)}

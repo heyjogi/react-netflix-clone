@@ -78,6 +78,7 @@ export default function Banner() {
       </Container>
     );
   }
+  console.log("🔍 API 요청 URL:", yourURL);
 }
 
 const Container = styled.div`
